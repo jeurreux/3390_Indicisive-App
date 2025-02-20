@@ -71,6 +71,9 @@ struct ContentView: View {
                 TextField("Ex: Restaurant", text: $choiceInput)
                     .textFieldStyle(.roundedBorder)
                     .focused($focus)
+                    .onSubmit {
+                        addChoice()
+                    }
             }
             HStack {
                 Text("Weight:")
